@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yasmine - Birthday</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="universe">
+
+    <div class="magic-decor" aria-hidden="true">
+      <span class="decor moon">☾</span>
+      <span class="decor butterfly butterfly-one">🦋</span>
+      <span class="decor butterfly butterfly-two">🦋</span>
+      <span class="decor star star-one">✦</span>
+      <span class="decor star star-two">✧</span>
+      <span class="decor star star-three">✦</span>
+    </div>
+
+    <div class="stars" id="stars"></div>
+
+    <header class="top-bar">
+      <span class="brand">YASMINE ✦</span>
+      <button class="back-btn" onclick="goBack()">← رجوع</button>
+    </header>
+
+    <main>
+
+      <!-- الصفحة الرئيسية -->
+      <section class="page active" id="home">
+        <div class="moon">☾</div>
+        <p class="eyebrow">A WORLD MADE JUST FOR YOU</p>
+        <h1>Yasmine</h1>
+        <p class="subtitle">عالم صغير، صنعته لكِ بكل الحب</p>
+        <button class="main-btn" onclick="goToPage('gate')">
+          افتحي عالمكِ السحري ✨
+        </button>
+      </section>
+
+      <!-- البوابة السحرية -->
+      <section class="page" id="gate">
+        <div class="big-icon">🗝️</div>
+        <h2>بوابتكِ إلى عالمنا</h2>
+        <p>خلف هذه البوابة تختبئ ذكريات وأمنيات ورسائل كتبتها لكِ من قلبي.</p>
+        <button class="main-btn" onclick="goToPage('birthday')">
+          افتحي البوابة
+        </button>
+      </section>
+
+      <!-- عيد الميلاد -->
+      <section class="page" id="birthday">
+        <div class="big-icon">🎂</div>
+        <p class="eyebrow">HAPPY BIRTHDAY</p>
+        <h2>كل عام وأنتِ بخير يا ياسمين</h2>
+        <p>
+          اليوم ليس يومًا عاديًا، اليوم وُلدت أجمل زهرة في عالمي.
+          أتمنى أن تكون أيامكِ القادمة مليئة بالفرح والحب.
+        </p>
+        <button class="main-btn" onclick="goToPage('garden')">
+          إلى حديقة ذكرياتنا 🌷
+        </button>
+      </section>
+
+      <!-- حديقة الذكريات -->
+      <section class="page" id="garden">
+        <div class="big-icon">🌷</div>
+        <h2>حديقة ذكرياتنا</h2>
+        <p>كل زهرة هنا تحمل ذكرى لا تشبه غيرها.</p>
+
+        <div class="flower-grid">
+          <button class="flower" onclick="showMemory('memory1')">
+            <span>🌹</span>
+            <small>أول لقاء</small>
+          </button>
+
+          <button class="flower" onclick="showMemory('memory2')">
+            <span>🌸</span>
+            <small>قبل الاعتراف</small>
+          </button>
+
+          <button class="flower" onclick="showMemory('memory3')">
+            <span>🌷</span>
+            <small>أول عيد ميلاد</small>
+          </button>
+        </div>
+
+        <div class="memory-box" id="memoryBox">
+          <p id="memoryText">اختاري زهرة لتكتشفي الذكرى التي تخبئها.</p>
+        </div>
+
+        <button class="main-btn" onclick="goToPage('treasure')">
+          صندوق الأسرار 🔐
+        </button>
+      </section>
+
+      <!-- صندوق الأسرار -->
+      <section class="page" id="treasure">
+        <div class="big-icon">🔐</div>
+        <h2>صندوق الأسرار</h2>
+        <p>هناك رسالة واحدة خبأتها لكِ هنا...</p>
+
+        <div class="secret-container">
+          <button class="secret-btn" onclick="showSecret()">
+            ✨ افتحي رسالتكِ
+          </button>
+
+          <div class="secret-message" id="secretMessage">
+            <h3>إلى ياسمين حبيبتي ❤️</h3>
+
+            <p>
+              بتعرفي يا ينونو صارلنا ثلاث سنين من يوم ما عرفتك وسنتين من يوم ما صارحتك باللي بقلبي وحكيتلك اني بحبك
+            </p>
+
+            <p>
+              ثلاث سنين مرو وفيهم ذكريات ومواقف ومشاعر كثير وأيام حلوة وأيام مش سهلة بس في إشي واحد بضلّه واضح إنك إلك مكانة بقلبي ما بتشبه حدا
+            </p>
+
+            <p>
+              بتذكر إني احتفلت بعيد ميلادك قبل واليوم حبيت اعملك اشي مختلف، إشي يكون إلك لحالك عالم صغير صنعته بإيدي وكل تفصيلة فيه حطيت فيها جزء من محبتي إلك
+            </p>
+
+            <p>
+              يمكن ما أقدر أكون جنبك اليوم ولا أقدر أقدم هديتي بإيدي بس حبيت يكون عندك اشي مني تفتحيه وتبتسمي وتحسي قديش إنتي غالية علي
+            </p>
+
+            <p>
+              كل عام وإنتي الخير اللي حاصل بحياتي يا حبيبتي وإن شاء الله تضل ضحكتك ما تفارق وجهك وتتحقق كل أمنياتك وأكون دايمًا سبب من أسباب سعادتك
+            </p>
+
+            <p>
+              بحبك يا أميرتي وكل عام وإنتي أجمل أقداري
+              <br>
+              وتذكري حبيتك وبحبك وحبقى أحبك ❤️
+            </p>
+          </div>
+        </div>
+
+        <button class="main-btn" onclick="goToPage('wishes')">
+          إلى سماء الأمنيات ✨
+        </button>
+      </section>
+
+      <!-- سماء الأمنيات -->
+      <section class="page" id="wishes">
+        <div class="big-icon">🌌</div>
+        <h2>سماء الأمنيات</h2>
+        <p>اختاري نجمة، ودعي أمنية جميلة ترافقكِ.</p>
+
+        <div class="wish-photo">
+          <img
+            src="https://i.ibb.co/67C0wKB9/1790005312294.png"
+            alt="ذكرى جميلة"
+          >
+        </div>
+
+        <div class="wish-grid">
+          <button onclick="showWish(0)">⭐</button>
+          <button onclick="showWish(1)">✨</button>
+          <button onclick="showWish(2)">🌟</button>
+        </div>
+
+        <div class="wish-box" id="wishBox">
+          أمنيات كثيرة تنتظركِ يا أميرتي.
+        </div>
+
+        <button class="main-btn" onclick="goToPage('palace')">
+          تابعي الرحلة 👑
+        </button>
+      </section>
+
+      <!-- قصر أميرتي -->
+      <section class="page" id="palace">
+        <div class="big-icon">👑</div>
+        <p class="eyebrow">A BOOK FULL OF OUR MEMORIES</p>
+        <h2>قصر أميرتي</h2>
+        <p>
+          في هذا العالم أنتِ الملكة، وكل تفاصيله صُنعت لتليق بكِ.
+        </p>
+
+        <div class="memory-book" id="memoryBook">
+
+          <!-- غلاف الكتاب -->
+          <div class="book-cover" id="bookCover">
+            <div class="cover-ornament">✦ ❦ ✦</div>
+            <div class="cover-crown">👑</div>
+            <h3>ذكريات أميرتي</h3>
+            <p>حكاية جمعت قلبي بقلبكِ</p>
+            <div class="cover-heart">♥</div>
+            <div class="cover-bottom">YASMINE · FOREVER</div>
+
+            <button class="open-book-btn" onclick="openMemoryBook()">
+              افتحي كتاب ذكرياتنا ✨
+            </button>
+          </div>
+
+          <!-- صفحات الكتاب -->
+          <div class="book-inside" id="bookInside">
+
+            <div class="book-heading">
+              <span>ذكريات لا تُنسى</span>
+              <span class="book-page-count" id="bookPageCount">1 / 5</span>
+            </div>
+
+            <div class="book-spread single-spread" id="bookSpread">
+              <div class="book-page single-page">
+                <span class="page-decoration">✦</span>
+                <img id="memoryImage" src="" alt="ذكرى من ذكرياتنا">
+                <span class="page-number" id="memoryPageNumber">١</span>
+              </div>
+            </div>
+
+            <div class="book-controls">
+              <button id="prevMemoryBtn" onclick="changeMemoryPage(-1)">
+                ❮ السابقة
+              </button>
+
+              <button id="nextMemoryBtn" onclick="changeMemoryPage(1)">
+                التالية ❯
+              </button>
+            </div>
+
+            <button class="close-book-btn" onclick="closeMemoryBook()">
+              إغلاق الكتاب 📖
+            </button>
+
+          </div>
+        </div>
+
+        <button class="main-btn palace-next-btn" onclick="goToPage('final')">
+          آخر مفاجأة ❤️
+        </button>
+      </section>
+
+      <!-- المفاجأة الختامية -->
+      <section class="page" id="final">
+
+        <div class="big-icon">💜</div>
+
+        <h2>إلى أجمل أقداري</h2>
+
+        <p>
+          قد ينتهي هذا العالم الصغير، لكن حبي لكِ لا ينتهي.
+          كل عام وأنتِ حبيبتي، وكل عام ونحن نصنع ذكريات أجمل.
+        </p>
+
+        <div class="final-heart">∞ ❤️ ∞</div>
+
+        <div class="birthday-surprise">
+
+          <p class="cake-intro">
+            والآن يا أميرتي... هذه مفاجأتكِ الأخيرة 🎁
+          </p>
+
+          <h3 class="cake-title">A Cake Made for You</h3>
+
+          <div class="birthday-cake">
+
+            <div class="candles">
+
+              <button class="candle"
+                onclick="extinguishCandle(this)"
+                aria-label="إطفاء الشمعة الأولى">
+                <span class="flame"></span>
+                <span class="wick"></span>
+              </button>
+
+              <button class="candle"
+                onclick="extinguishCandle(this)"
+                aria-label="إطفاء الشمعة الثانية">
+                <span class="flame"></span>
+                <span class="wick"></span>
+              </button>
+
+              <button class="candle"
+                onclick="extinguishCandle(this)"
+                aria-label="إطفاء الشمعة الثالثة">
+                <span class="flame"></span>
+                <span class="wick"></span>
+              </button>
+
+            </div>
+
+            <div class="cake-top"></div>
+            <div class="cake-layer cake-layer-top"></div>
+            <div class="cake-layer cake-layer-bottom"></div>
+            <div class="cake-plate"></div>
+
+            <div class="cake-name">Yasmine</div>
+            <div class="cake-heart">♥</div>
+
+          </div>
+
+          <p class="candle-hint" id="candleHint">
+            أطفئي الشموع الثلاث وتمنّي أمنية يا أميرتي ✨
+          </p>
+
+          <div class="birthday-celebration" id="birthdayCelebration">
+
+            <h2>Happy Birthday</h2>
+            <h3>My Princess 👑</h3>
+
+            <p>
+              كل عام وأنتِ أجمل زهرة في عالمي ❤️
+            </p>
+
+            <div class="celebration-hearts">
+              💜 💗 💛 💗 💜
+            </div>
+
+          </div>
+
+          <div class="confetti-container" id="confettiContainer"></div>
+
+        </div>
+
+        <button class="main-btn" onclick="goHome()">
+          عودة إلى البداية
+        </button>
+
+      </section>
+
+    </main>
+
+    <!-- الذكريات الأصلية للزهور -->
+    <div class="hidden-memories" aria-hidden="true">
+
+      <div id="memory1">
+        بتذكر اول مرا التقينا كنا بنلعب الجاسوس وك اكرام مني قلت لك اكرام الضيف واجب واقصيتك من اول جولة ولولا عنادك ما كنا راح نبداء قصتنا الجميلة
+      </div>
+
+      <div id="memory2">
+        من فترة قبل ما أحكيلك إني بحبك، كنت غبي بافعالي ومو مفهومه ابدا سواء الك او الي، ومشاعر كل يوم كانت تكبر أكثر. كنت أفكر ليه بسوي هيك وشو اللي بصير معي وكيف ممكن أوصلك اللي جواي، وكيف أحكيلك عن مكانتك عندي. وبعدها إجا اليوم اللي قررت فيه أحكيلك كل اللي بقلبي انا عارف انك بتحبيني 😂
+      </div>
+
+      <div id="memory3">
+        بتذكر أول عيد ميلاد احتفلت فيه معك، وقديش كنت مبسوط إني أشاركك هاليوم وأكون جزء من فرحتك. واليوم حبيت أعملك هالعالم الصغير، يمكن مش هدية كبيرة، بس كل تفصيلة فيه معمولة عشانك. ونفسي ما يكون هاد آخر عيد ميلاد أحتفل فيه معك، ونضل نصنع ذكريات حلوة ونرجع نتذكرها ونضحك عليها بعد سنين. ❤️
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- مشغل موسيقى ياسمين -->
+  <div class="music-player" dir="rtl">
+
+    <button
+      id="musicToggle"
+      class="music-toggle"
+      onclick="toggleYasmineMusic()"
+      aria-label="تشغيل أو إيقاف الموسيقى"
+    >▶</button>
+
+    <div class="music-info">
+      <span>أغنيتنا ❤️</span>
+      <small>I Wanna Grow Old with You</small>
+    </div>
+
+    <input
+      id="musicVolume"
+      class="music-volume"
+      type="range"
+      min="0"
+      max="1"
+      step="0.05"
+      value="0.7"
+      aria-label="مستوى الصوت"
+    >
+
+    <audio id="yasmineAudio" loop preload="none">
+      <source
+        src="https://www.image2url.com/r2/default/audio/1794411102832-e821f17f-f73f-4acb-8bc7-006a854e2dbd.m4a"
+        type="audio/mp4"
+      >
+    </audio>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
